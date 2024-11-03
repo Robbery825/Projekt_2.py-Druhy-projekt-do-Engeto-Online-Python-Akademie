@@ -34,15 +34,15 @@ print("Enter a number:", sec_cislo)
 print(cara)       
 
 def get_bulls_cows(tajne, hadej):
-    bulls = sum(1 for i in range(4) if hadej[i] == tajne[i])
+    bulls = sum(1 for b in range(4) if hadej[b] == tajne[b])
     cows = sum(1 for digit in set(hadej) if digit in tajne) - bulls
     return bulls, cows
 
 def f_bulls_and_cows(bulls, cows):
-    bulls_text = "Bull" if bulls == 1 else "Bulls"
-    cows_text = "Cow" if cows == 1 else "Cows"
+    bulls_t = "Bull" if bulls == 1 else "Bulls"
+    cows_t = "Cow" if cows == 1 else "Cows"
     
-    return f"{bulls} {bulls_text}, {cows} {cows_text}"
+    return f"{bulls} {bulls_t}, {cows} {cows_t}"
 
 pokusy = 0
 start_time = time.time()
